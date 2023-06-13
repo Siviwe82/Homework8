@@ -39,3 +39,17 @@ form {
 .location {
   font-size: 30px;
 }
+
+.footer {
+  text-align: center;
+  padding-bottom: 0;
+  padding-top: 50px;
+}
+.w-100 {
+  transition: all ease-in-out 200ms;
+}
+.w-100:hover {
+  background-color: #3e1d52;
+  border: #3e1d52;
+  color: white;
+}
