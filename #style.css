@@ -6,7 +6,7 @@ body {
 form {
   padding-top: 35px;
 }
-.container-fluid {
+.container {
   background: linear-gradient(rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%);
 }
 .top {
@@ -14,7 +14,7 @@ form {
   font-size: 18px;
 }
 .forecast {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(5, 121, 9, 0.253);
   padding-top: 20px;
   font-size: 16px;
   width: 100%;
