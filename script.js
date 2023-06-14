@@ -35,7 +35,7 @@ function test(response) {
   let getDay6 = new Date(response.data.daily[5].time * 1000);
 
   const today = new Date();
-  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
   let months = [
     "Jan",
     "Feb",

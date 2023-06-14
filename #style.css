@@ -1,13 +1,14 @@
 body {
   font-family: 'Poppins' sans-serif;
   font-size: 20px;
-  color: white;
+  color: rgb(41, 7, 7);
+  background-color: blue;
 }
 form {
   padding-top: 35px;
 }
 .container {
-  background: linear-gradient(rgb(12, 20, 69) -16.9%, rgb(71, 30, 84) 119.9%);
+  background: linear-gradient(#0c1445 -16.9%, rgb(71, 30, 84) 119.9%);
 }
 .top {
   padding-bottom: 35px;
