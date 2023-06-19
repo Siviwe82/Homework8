@@ -41,37 +41,64 @@ alt=""
 width=""
 />
 <div class="weather-forecast-temperatures">
-  <span class
+  <span class="weather-forecast-temperature-max"> ${Math.round(forecastDay.temp.max)}˚
+  </span>
+  <span class="weather-forecast-temperature-min"> ${Math.round(forecastDay.temp.min)} ˚</span>
 </div>
 </div>
-  }
+  ;
+}
+});
+
+forecastHTML = forecastHTML + `</div>`;
 }
 
+function getForecast(coodinates) {
+  let apiKey = "1a2b7258ebd456c01aef9175dfe8b709";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coodinates.lat}&lon=${coodinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayTemperature(response) {
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
+
+  let celsiusTemperature = response.data.main.temp;
+
+temperatureElement.innerHTML = Math.round(celsiusTemperature);
+cityElement.innerHTML = response.data.name;
+descriptionElement.innerHTML = response.data.weather[0].description;
+humidityElement.innerHTML = response.data.main.humidity;
+windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
+dateElement.innerHTML = formatDate(response.data.dt * 1000);
+iconElement.setAttribute(
+  "src",
+  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.pnp`
+);
+iconElement.setAttribute("alt", reponse.data.weather[0].description);
+
+getForecast(response.data.coord);
 }
 
 function searchCity(city) {
-  let sheKey = "9oa4e130b348d430501cf5a6aeaaa6ft";
-  let sheUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${sheKey}&units=metric`;
-  axios.get(sheUrl).then(test);
+  let sheKey = "1a2b7258ebd456c01aef9175dfe8b709";
+  let sheUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}$units=metrics`;
+  axios.get(apiUrlUrl).then(displayTemperature);
 }
 
-function getSubmit(event) {
-  event.preventDefault();
-  let input = document.querySelector(".form-control");
-  searchCity(input.value);
+function handleSubmit(event) {
+ event.preventDefault();
+ let cityElement = document.querySelector("#city-input")
+ searchCity(cityElement.value);
+
 }
+  let form = document.querySelector("#search-form");
+  form.addEventListener("submit", handleSubmit);
 
-function handlePosition(position) {
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-
-  let myKey = "9oa4e130b348d430501cf5a6aeaaa6ft";
-  let geoUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${myKey}&units=metric`;
-
-  axios.get(geoUrl).then(test);
-
-  let form = document.querySelector("#search");
-  form.addEventListener("submit", getSubmit);
-}
-
-navigator.geolocation.getCurrentPosition(handlePosition);
+searchCity("Cape Town")
