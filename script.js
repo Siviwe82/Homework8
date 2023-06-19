@@ -81,12 +81,12 @@ iconElement.setAttribute(
   "src",
   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.pnp`
 );
-iconElement.setAttribute("alt", reponse.data.weather[0].description);
+iconElement.setAttribute("alt", response.data.weather[0].description);
 
 getForecast(response.data.coord);
 }
 
-function searchCity(city) {
+function search(city) {
   let sheKey = "1a2b7258ebd456c01aef9175dfe8b709";
   let sheUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}$units=metrics`;
   axios.get(apiUrlUrl).then(displayTemperature);
@@ -95,10 +95,10 @@ function searchCity(city) {
 function handleSubmit(event) {
  event.preventDefault();
  let cityElement = document.querySelector("#city-input")
- searchCity(cityElement.value);
+ search(cityElement.value);
 
 }
   let form = document.querySelector("#search-form");
   form.addEventListener("submit", handleSubmit);
 
-searchCity("Cape Town")
+search("Cape Town")

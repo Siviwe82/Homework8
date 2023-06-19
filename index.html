@@ -34,80 +34,115 @@
             <div class="col-9">
               <input type="search" class="form-control" id="city-input" autocomplete="off"/>
             </div>
-            <div class="col-2">
+            <div class="col-3">
               <input type="submit" value="Search" class="btn btn-light w-100" />
             </div>
           </div>
         </form>
         <div class="overview">
-          <h1 id="city"></h1>
+          <h1 id="city"> Sydney NSW, Australia</h1>
+          <span id="description">Cloud</span>
+          <p>Last update:
+            <span id="date">Friday 11:30</span>
+          </p>
+          </div>
         <div class="row">
-          <div class="col-4"></div>
-          <div class="col-4" id="current">
-            <div id="temp">
-              <span class="temp1">13˚C</span>
+          <div class="col-6">
+          <div class="clearfix">
+            <img src=""http://openweathermap.org/img/wn/50d@2x.png"
+             alt="mist" 
+             class="weather-icon float-left"
+              />
+            <div class="float-left weather-forecast-temeperature">
+            <strong><span id="temeperature">14</span></strong
+              ><span class="units"
+              ><a href="#" id="celsius-link" class="active">˚C</a> | 
+              <a href="#" id="fahrenheit-link" class"persive">˚F</a></span>
+              >
             </div>
-            <div class="icn1"><img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="light rain" id="icon1" /></div>
-            <div class="location">Cape Town</div>
-            <span class="dscrp1">light rain 
-                <br>
-                wind speed: 5km/hr
-            </span>
-            <div><span class="time1">11:30 </span>
-            <span class="date">Tue 10 June </span>
-        </div>
           </div>
-          <div class="col-4"></div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity:
+                <span id="Humidity">80</span>%
+              </li>
+            <li>Windy:
+               <span id="wind">5</span>5km/hr
+               </li>
+               </ul>
+          </div>
         </div>
-      </div>
-      <div class="forecast">
+          <div class="weather-forecast" id="forecast">
         <div class="row">
-          <div class="col-1"></div>
           <div class="col-2">
-            <div class="day1">Wed</div>
-            <div class="icon2">
-              <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="heavy intensity rain" id="icon2" width="55px" />
+          <img src="http://openweathermap.org/img/wn/04d@2x.png"
+          alt="broken cloud"
+          width="38px">
+          <div class="weather-forecast-temperature">
+            <span class="weather-forecast-temperature-max">18˚</span>
+            <span class="weather-forecast-temperature-min">8˚</span>
+          </div>
+        <div class="col-2">
+          <div class="weather-forecast-date">Sat</div>
+           <img src="http://openweathermap.org/img/wn/09d@2x.png"
+          alt="shower rain"
+          width="38px">
+            <div class="weather-forecast-temeperature">
+            <span class="weather-forecast-temperature-max">23˚</span>
+            <span class="weather-forecast-temperature-min">11˚</span>
             </div>
-            <div class="temp2">14˚/ 10˚</div>
+            </div>
+            <div class="col-2">
+              <div class="weather-forecast-date">Sun</div>
+              <img src="http://openweathermap.org/img/wn/11d@2x.png"
+              alt="thunderstorm"
+              width="38px">
+            <div class="weather-forecast-temperature">
+            <span class="weather-forecast-temperature-max">17˚</span>
+            <span class="weather-forecast-temperature-min">13˚</span>
+            </div>
+            </div>
+            <div class="col-2">
+              <div class="weather-forecast-date">Mon</div>
+              <img src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="rain"
+              width="38px>"
+            <div class="weather-forecast-temperature">
+              <span class="weather-forecast-temperature-max">16˚</span>
+              <span class="weather-forecast-temperature-min">11˚</span>
+              </div>
           </div>
           <div class="col-2">
-            <div class="day2">Thu</div>
-            <div class="icon3">
-              <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="moderate rain" id="icon3" width="55px" />
-            </div>
-            <div class="temp3">16˚ / 12˚</div>
+            <div class="weather-forecast-date">Tue</div>
+            <img src="http://openweathermap.org/img/wn/13d@2x.png"
+            alt="snow"
+            width="38px">
+            <div class="weather-forecast-temperature">
+              <span class="weather-forecast-temperature-max">15˚</span>
+                <span class="weather-forecast-temperature-min">9˚</span>
+              </div>
+              </div>
           </div>
           <div class="col-2">
-            <div class="day3">Fri</div>
-            <div class="icon4">
-              <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" alt="overcast cloud" id="icon4" width="55px" />
-            </div>
-            <div class="temp4">18˚ / 11˚</div>
+            <div class="weather-forecast-date">Wed</div>
+             <img src="http://openweathermap.org/img/wn/01d@2x.png"
+             alt="clear sky"
+             width="38px">
+            <div class="weather-forecast-temperature">
+              <span class="weather-forecast-temperature-max">17˚</span>
+              <span class="weather-forecast-temperature-min">10˚</span>
           </div>
-          <div class="col-2">
-            <div class="day4">Sat</div>
-            <div class="icon5">
-              <img src="	https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="moderate rain" id="icon5" width="55px" />
-            </div>
-            <div class="temp5">15˚ / 12˚</div>
           </div>
-          <div class="col-2">
-            <div class="day5">Sun</div>
-            <div class="icon6">
-              <img src="	https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="light rain" id="icon6" width="55px" />
-            </div>
-            <div class="temp6">18˚ / 11˚</div>
-          </div>
-          <div class="col-2"></div>
         </div>
-        <div class="footer">
-            <a href="https://github.com/Siviwe82/Homework8" target="_blank">
-                open-source code</a
-                >
-                by Siviwe Memani
+        <small></small>
+    <a
+     href="https://github.com/Siviwe82/Homework8" target="_blank"
+     >open-source code</a
+       >
+        by Siviwe Memani
+      </small>
         </div>
-      </div>
-    </div>
-    <script src="src/index.js"></script>
+    <script src="src/app.js"></script>
     </body>
 </html>

@@ -1,56 +1,99 @@
-body {
-  font-family: 'Poppins' sans-serif;
-  font-size: 20px;
-  color: rgb(41, 7, 7);
-  background-color: blue;
-}
-form {
-  padding-top: 35px;
-}
-.container {
-  background: linear-gradient(#0c1445 -16.9%, rgb(71, 30, 84) 119.9%);
-}
-.top {
-  padding-bottom: 35px;
-  font-size: 18px;
-}
-.forecast {
-  background-color: rgba(5, 121, 9, 0.253);
-  padding-top: 20px;
-  font-size: 16px;
-  width: 100%;
-}
-.units {
-  font-size: 25px;
-}
-.row {
-  text-align: center;
-}
-.col-4 {
-  justify-items: center;
-  padding-bottom: 20px;
-}
-#temp {
-  font-size: 70px;
-}
-.form-control {
-  background-color: #3e1d52;
-  border: #3e1d52;
-}
-.location {
-  font-size: 30px;
+ body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.footer {
-  text-align: center;
-  padding-bottom: 0;
-  padding-top: 50px;
+h1 {
+    color: bisque;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 28px;
+    margin: 0;
 }
-.w-100 {
-  transition: all ease-in-out 200ms;
+
+ul {
+    margin: 0 0 10px;
+    padding: 0;
 }
-.w-100:hover {
-  background-color: #3e1d52;
-  border: #3e1d52;
-  color: white;
+
+li {
+    list-style: none;
+    color: rgb(135, 135, 135);
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1;
+    height: 19px;
+}
+
+li:first-letter {
+    text-transform: capitalize;
+
+}
+
+.weather-app-wrapper {
+    max-width: 600px;
+    margin: 30 px auto;
+}
+
+.weather-app {
+    padding: 20px;
+    border: 1px solid #dadde1;
+    border-radius: 10px;
+}
+
+.overview {
+    margin-bottom: 20px;
+}
+
+.weather-temperature img {
+    margin-right: 10px;
+    height: 64px;
+    width: 64px;
+
+}
+
+.weather-temperature strong {
+  color: blue;
+  font-size: 64px; 
+  line-height: 1; 
+  font-weight: 400;
+}
+
+.weather-temperature .units {
+    position: relative;
+    font-size: 16px;
+    top: -34px;
+}
+
+.weather-temperature .active {
+    color: blue;
+    cursor: default;
+}
+
+.weather-temperature .active:hover {
+    text-decoration: none;
+}
+
+.weather-forecast {
+    margin-top: 20px;
+    text-align: center;
+    color: #dadde1;
+}
+
+.weather-forecast-date {
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.weather-forecast-temperature-min {
+    opacity: 0.5;
+}
+
+.weather-forecast-temperature {
+    font-size: 13px;
+}
+
+.search-form {
+    margin-bottom: 20px;
 }
